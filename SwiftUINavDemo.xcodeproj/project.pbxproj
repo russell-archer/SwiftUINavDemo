@@ -11,6 +11,8 @@
 		6849C0E92613DA4F00C8462E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6849C0E82613DA4F00C8462E /* ContentView.swift */; };
 		6849C0EB2613DA5000C8462E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6849C0EA2613DA5000C8462E /* Assets.xcassets */; };
 		6849C0EE2613DA5000C8462E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6849C0ED2613DA5000C8462E /* Preview Assets.xcassets */; };
+		6849C0F72613DAAF00C8462E /* View2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6849C0F62613DAAF00C8462E /* View2.swift */; };
+		6849C0FA2613DB1D00C8462E /* View3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6849C0F92613DB1D00C8462E /* View3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		6849C0EA2613DA5000C8462E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6849C0ED2613DA5000C8462E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6849C0EF2613DA5000C8462E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6849C0F62613DAAF00C8462E /* View2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View2.swift; sourceTree = "<group>"; };
+		6849C0F92613DB1D00C8462E /* View3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			children = (
 				6849C0E62613DA4F00C8462E /* SwiftUINavDemoApp.swift */,
 				6849C0E82613DA4F00C8462E /* ContentView.swift */,
+				6849C0F62613DAAF00C8462E /* View2.swift */,
+				6849C0F92613DB1D00C8462E /* View3.swift */,
 				6849C0EA2613DA5000C8462E /* Assets.xcassets */,
 				6849C0EF2613DA5000C8462E /* Info.plist */,
 				6849C0EC2613DA5000C8462E /* Preview Content */,
@@ -138,7 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6849C0FA2613DB1D00C8462E /* View3.swift in Sources */,
 				6849C0E92613DA4F00C8462E /* ContentView.swift in Sources */,
+				6849C0F72613DAAF00C8462E /* View2.swift in Sources */,
 				6849C0E72613DA4F00C8462E /* SwiftUINavDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
