@@ -47,7 +47,7 @@
 			isa = PBXGroup;
 			children = (
 				687072772616130C00299508 /* README.md */,
-				6870727A2616167E00299508 /* read-assets */,
+				6870727A2616167E00299508 /* readme-assets */,
 				6849C0E52613DA4F00C8462E /* SwiftUINavDemo */,
 				6849C0E42613DA4F00C8462E /* Products */,
 			);
@@ -83,13 +83,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		6870727A2616167E00299508 /* read-assets */ = {
+		6870727A2616167E00299508 /* readme-assets */ = {
 			isa = PBXGroup;
 			children = (
 				6870727C261616B800299508 /* Avoiding Multiple NavigationViews 0.png */,
 				6870727B261616B800299508 /* Avoiding Multiple NavigationViews 1.png */,
 			);
-			path = "read-assets";
+			path = "readme-assets";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
