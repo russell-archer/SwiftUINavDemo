@@ -12,7 +12,7 @@ This app demonstrates the following:
 
 Let's say you have three linked views:
 
-![](./readme-assets/Avoiding%20Multiple%20NavigationViews%200.png)
+![](./readme-assets/AvoidingMultipleNavigationViews0.png)
 
 The solution is simple: **remove** the `NavigationView` from child views (e.g. ListView in this example). 
 This means that any `NavigationLink` in child view will use the parent's `NavigationView`:
@@ -48,7 +48,7 @@ struct DetailView: View {
  
  If you use this approach then any `NavigationLink` in a child view will automatically use its parent's `NavigationView`:
  
- ![](./readme-assets/Avoiding%20Multiple%20NavigationViews%201.png)
+ ![](./readme-assets/AvoidingMultipleNavigationViews1.png)
  
  ## The navigationViewStyle Modifier
 Note that the `.navigationViewStyle(StackNavigationViewStyle())` modifier fixes the following non-fatal runtime error:
