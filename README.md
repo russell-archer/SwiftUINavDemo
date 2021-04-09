@@ -3,8 +3,8 @@ SwiftUI navigation demo
 
 This app demonstrates the following:
 
-- Navigation between multiple levels of views with a single NavigationView (avoiding multiple nav bars)
-- Sharing data between views using @State, @StateObject and @EnvironmentObject
+- Navigation between multiple levels of views with a single `NavigationView` (avoiding multiple nav bars)
+- Sharing data between views using `@State`, `@StateObject` and `@EnvironmentObject`
 
 ---
 
@@ -88,5 +88,57 @@ struct ContentView: View {
 
 # Sharing data between views
 
+There are various strategies for sharing data across views:
 
+- **Parent to Child**
+    - Direct `injection` of property into the child's initializer
+    - Create `@State` object in the parent, `@Binding` in the child
+    - Parent creates shared data model
 
+- **Parent to non-direct Child**
+    - Parent creates shared data model
+
+- **Child to Parent**
+    - `Closure` (one-way from child to parent)
+    - Child updates `@Binding`
+    - Parent creates shared data model
+
+- **Child to non-direct Parent**
+    - `PreferenceKey` key-value pair
+    - Parent creates shared data model
+
+In this app we share data between parent and child views using `@State` and `@Binding`.
+We also have a shared model of type `WidgetFactory<Widget>` which is created at the `App` level:
+
+```swift
+import SwiftUI
+
+@main
+struct SwiftUINavDemoApp: App {
+    
+    // Create shared model
+    var widgetFactory = WidgetFactory<Widget>()
+    
+    var body: some Scene {
+        WindowGroup {
+            WidgetCreationView()
+                .environmentObject(widgetFactory)  // Make available to all views
+        }
+    }
+}
+
+struct FactoryView: View {
+    
+    @EnvironmentObject var widgetFactory: WidgetFactory<Widget>  // Access the shared model
+    
+    var body: some View {
+        
+        List(widgetFactory.inventory) { widget in
+            WidgetView(fillColor: Binding.constant(widget.color),
+                       lineColor: Binding.constant(widget.lineColor),
+                       lineWidth: Binding.constant(Double(widget.lineWidth)),
+                       price: Binding.constant(widget.price))
+        }
+    }
+}
+```

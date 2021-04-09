@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct SwiftUINavDemoApp: App {
+    
+    // Create shared model
+    var widgetFactory = WidgetFactory<Widget>()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WidgetCreationView()
+                .environmentObject(widgetFactory)  // Make available to all views
         }
     }
 }
