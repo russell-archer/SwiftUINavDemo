@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WidgetCreationView: View {
     
+    // Access the widgetFactory (ObservableObject) that has already been created by @StateObject in SwiftUINavDemoApp
     @EnvironmentObject var widgetFactory: WidgetFactory<Widget>
     
     @State private var fillColor = Color.blue

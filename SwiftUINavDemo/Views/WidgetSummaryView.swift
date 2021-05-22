@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WidgetSummaryView: View {
     
+    // Access the widgetFactory (ObservableObject) that has already been created by @StateObject in SwiftUINavDemoApp
     @EnvironmentObject var widgetFactory: WidgetFactory<Widget>
     
     var body: some View {

@@ -13,6 +13,7 @@ struct CreateWidgetButton: View {
     @Binding var lineWidth: Double
     @Binding var price: Double
     
+    // Access the widgetFactory (ObservableObject) that has already been created by @StateObject in SwiftUINavDemoApp
     @EnvironmentObject var widgetFactory: WidgetFactory<Widget>
     
     var body: some View {

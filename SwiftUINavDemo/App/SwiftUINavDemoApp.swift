@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUINavDemoApp: App {
     
     // Create shared model
-    var widgetFactory = WidgetFactory<Widget>()
+    @StateObject var widgetFactory = WidgetFactory<Widget>()
     
     var body: some Scene {
         WindowGroup {
